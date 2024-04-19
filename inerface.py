@@ -287,7 +287,7 @@ def udeln_qstart_histogram(field,plast,profil,year,click_perm,click_nfrac,click_
             hovertemplate="Факт Р50 : %{x:.3f}<br>"))
 
         fig.update_layout(
-            xaxis1=dict(title=f"{label_dict[profil][0]} удельная в {year}-й год, {label_dict[profil][0]+''.join([norm_mult[i] for i in selected_buttons])}"),
+            xaxis1=dict(title=f'{label_dict[profil][0]} удельная в {year}-й год, {label_dict[profil][0]+"".join([norm_mult[i] for i in selected_buttons])}'),
             yaxis1=dict(title=f'Кол-во'))
             #title=dict(text=f'Удельная добыча в 1-ый год')
         return fig
@@ -476,7 +476,7 @@ def q_profils_udeln(field,plast,profil,graph,click_perm,click_nfrac,click_hoil,c
 
         fig.update_layout(
             xaxis1=dict(title='Годы',range=[0.6,len(p10)+0.5]),
-            yaxis1=dict(title=f"{label_dict[profil][0]+''.join([norm_mult[i] for i in selected_buttons])}"),
+            yaxis1=dict(title=f'{label_dict[profil][0]+"".join([norm_mult[i] for i in selected_buttons])}'),
             title=dict(text=f'Сценарий 1-Удельные профиля, {label_dict[profil][0]}'))
         return fig
     else:
@@ -681,7 +681,7 @@ def q_discont_udeln(field,horizon,profil,graph,coef_discont,click_perm,click_nfr
 
         fig.update_layout(
             xaxis1=dict(title='Годы',range=[0.9,len(p10)+0.5]),
-            yaxis1=dict(title=f'{label_dict[profil][0]+''.join([norm_mult[i] for i in selected_buttons])}'),
+            yaxis1=dict(title=f'{label_dict[profil][0]+"".join([norm_mult[i] for i in selected_buttons])}'),
             title=dict(text=f'Диск. удельные профиля, ставка {coef_discont}%'))
         return fig
     else:
