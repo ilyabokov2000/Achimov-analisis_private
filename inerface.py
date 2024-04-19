@@ -106,6 +106,7 @@ tab2_content=[
 #--------------------------------------------------------------layout-----------------------------------------------------------------------
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True) #Initialize the app+тема BOOTSTRAP
 # suppress_callback_exceptions=True для 
+server = app.server
 
 app.layout = html.Div([
     dbc.Row([
