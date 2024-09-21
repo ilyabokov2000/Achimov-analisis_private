@@ -26,10 +26,11 @@ import json
 
 #external_scripts = ["https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"] #для копироания данных, external_scripts=external_scripts
 #----------------------------------------------------------------Служебка---------------------------------------------------------------------
-server = Flask(__name__) #это для фласк суеты нах она
+server = Flask(__name__) #это для фласк суеты
+
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,server = server) #Initialize the app+тема BOOTSTRAP
 # suppress_callback_exceptions=True от пустых значений
 server = app.server #это для деплоя
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,server = server) #Initialize the app+тема BOOTSTRAP
 
 # Настройка кэша для хранения загруженных данных
 cache = Cache(app.server, config={'CACHE_TYPE': 'filesystem','CACHE_DIR': 'cache-directory'})
