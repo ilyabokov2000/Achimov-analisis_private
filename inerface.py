@@ -2198,7 +2198,7 @@ def q_discont_udeln(fact_filename,ai_filename,fact_viborka,ai_viborka,horizon,ho
             height=700, width=800, 
             title_text=f'Дисконтированные удельные профиля, ставка {coef_discont}%', 
             showlegend=True,
-            yaxis1=dict(title=f"{label_dict[profil][0]+"".join([norm_mult[i] for i in selected_buttons])}"),
+            yaxis1=dict(title=label_dict[profil][0]+"".join([norm_mult[i] for i in selected_buttons])),
             yaxis2=dict(title="Кол-во скважин"),
             xaxis1=dict(showticklabels=False), #убрать тики оси х верхнего грф
             xaxis2=dict(title='Годы',tickmode='array',tickvals=year_well['Годы'])) 
