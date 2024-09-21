@@ -26,10 +26,10 @@ import json
 
 #external_scripts = ["https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"] #для копироания данных, external_scripts=external_scripts
 #----------------------------------------------------------------Служебка---------------------------------------------------------------------
-server = Flask(__name__) #это для фласк суеты
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,server = server) #Initialize the app+тема BOOTSTRAP
+server = Flask(__name__) #это для фласк суеты нах она
 # suppress_callback_exceptions=True от пустых значений
-#server = app.server №это для деплоя
+server = app.server #это для деплоя
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,server = server) #Initialize the app+тема BOOTSTRAP
 
 # Настройка кэша для хранения загруженных данных
 cache = Cache(app.server, config={'CACHE_TYPE': 'filesystem','CACHE_DIR': 'cache-directory'})
@@ -2848,6 +2848,6 @@ def toggle_collapse(n_click, is_open):
     return is_open, "Показать таблицу фильтрации МВР"
 
 if __name__ == '__main__': # Run the app
-    app.run(debug=True) #True=dev mode False
+    app.run(debug=False) #True=dev mode False
 
     
