@@ -2849,6 +2849,6 @@ def toggle_collapse(n_click, is_open):
     return is_open, "Показать таблицу фильтрации МВР"
 
 if __name__ == '__main__': # Run the app
-    app.run(debug=True) #True=dev mode False
+    app.run(debug=False) #True=dev mode False
 
     
